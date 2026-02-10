@@ -1,0 +1,14 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+plan.out
+
+# Segredos e Chaves
+EXTRAS/
+*.txt
+*.key
+*.pem
+azure-key
+azure-key.pub
