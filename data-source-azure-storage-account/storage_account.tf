@@ -12,12 +12,12 @@ resource "azurerm_storage_account" "storage" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
-  tags = local.common_tags
+   tags = local.common_tags
 }
 
 resource "azurerm_storage_container" "container" {
   name                  = "imagenscontainer"
-  storage_account_id    = azurerm_storage_account.storage.id
+  storage_account_name  = azurerm_storage_account.storage.name
   container_access_type = "blob"
 }
 
