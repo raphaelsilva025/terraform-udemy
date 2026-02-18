@@ -1,0 +1,1999 @@
+{
+    "format_version": "1.2",
+    "terraform_version": "1.12.2",
+    "planned_values": {
+        "root_module": {
+            "resources": [
+                {
+                    "address": "azurerm_network_security_group.nsg",
+                    "mode": "managed",
+                    "type": "azurerm_network_security_group",
+                    "name": "nsg",
+                    "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                    "schema_version": 0,
+                    "values": {
+                        "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check",
+                        "location": "westeurope",
+                        "name": "nsg-bloco-check",
+                        "resource_group_name": "rg-bloco-check",
+                        "security_rule": [
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destination_address_prefix": "*",
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_range": "22",
+                                "destination_port_ranges": [],
+                                "direction": "Inbound",
+                                "name": "SSH",
+                                "priority": 200,
+                                "protocol": "Tcp",
+                                "source_address_prefix": "*",
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_range": "*",
+                                "source_port_ranges": []
+                            },
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destination_address_prefix": "*",
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_range": "3389",
+                                "destination_port_ranges": [],
+                                "direction": "Inbound",
+                                "name": "RDP",
+                                "priority": 210,
+                                "protocol": "Tcp",
+                                "source_address_prefix": "*",
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_range": "*",
+                                "source_port_ranges": []
+                            },
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destination_address_prefix": "*",
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_range": "443",
+                                "destination_port_ranges": [],
+                                "direction": "Inbound",
+                                "name": "porta-443",
+                                "priority": 110,
+                                "protocol": "Tcp",
+                                "source_address_prefix": "*",
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_range": "*",
+                                "source_port_ranges": []
+                            },
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destination_address_prefix": "*",
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_range": "80",
+                                "destination_port_ranges": [],
+                                "direction": "Inbound",
+                                "name": "porta-80",
+                                "priority": 100,
+                                "protocol": "Tcp",
+                                "source_address_prefix": "*",
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_range": "*",
+                                "source_port_ranges": []
+                            },
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destination_address_prefix": "*",
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_range": "8080",
+                                "destination_port_ranges": [],
+                                "direction": "Inbound",
+                                "name": "porta-8080",
+                                "priority": 120,
+                                "protocol": "Tcp",
+                                "source_address_prefix": "*",
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_range": "*",
+                                "source_port_ranges": []
+                            }
+                        ],
+                        "tags": {},
+                        "timeouts": null
+                    },
+                    "sensitive_values": {
+                        "security_rule": [
+                            {
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_ranges": [],
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_ranges": []
+                            },
+                            {
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_ranges": [],
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_ranges": []
+                            },
+                            {
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_ranges": [],
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_ranges": []
+                            },
+                            {
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_ranges": [],
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_ranges": []
+                            },
+                            {
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_ranges": [],
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_ranges": []
+                            }
+                        ],
+                        "tags": {}
+                    }
+                },
+                {
+                    "address": "azurerm_network_security_rule.rule[\"443\"]",
+                    "mode": "managed",
+                    "type": "azurerm_network_security_rule",
+                    "name": "rule",
+                    "index": "443",
+                    "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                    "schema_version": 0,
+                    "values": {
+                        "access": "Allow",
+                        "description": "",
+                        "destination_address_prefix": "*",
+                        "destination_address_prefixes": [],
+                        "destination_application_security_group_ids": [],
+                        "destination_port_range": "443",
+                        "destination_port_ranges": [],
+                        "direction": "Inbound",
+                        "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check/securityRules/porta-443",
+                        "name": "porta-443",
+                        "network_security_group_name": "nsg-bloco-check",
+                        "priority": 110,
+                        "protocol": "Tcp",
+                        "resource_group_name": "rg-bloco-check",
+                        "source_address_prefix": "*",
+                        "source_address_prefixes": [],
+                        "source_application_security_group_ids": [],
+                        "source_port_range": "*",
+                        "source_port_ranges": [],
+                        "timeouts": null
+                    },
+                    "sensitive_values": {
+                        "destination_address_prefixes": [],
+                        "destination_application_security_group_ids": [],
+                        "destination_port_ranges": [],
+                        "source_address_prefixes": [],
+                        "source_application_security_group_ids": [],
+                        "source_port_ranges": []
+                    }
+                },
+                {
+                    "address": "azurerm_network_security_rule.rule[\"80\"]",
+                    "mode": "managed",
+                    "type": "azurerm_network_security_rule",
+                    "name": "rule",
+                    "index": "80",
+                    "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                    "schema_version": 0,
+                    "values": {
+                        "access": "Allow",
+                        "description": "",
+                        "destination_address_prefix": "*",
+                        "destination_address_prefixes": [],
+                        "destination_application_security_group_ids": [],
+                        "destination_port_range": "80",
+                        "destination_port_ranges": [],
+                        "direction": "Inbound",
+                        "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check/securityRules/porta-80",
+                        "name": "porta-80",
+                        "network_security_group_name": "nsg-bloco-check",
+                        "priority": 100,
+                        "protocol": "Tcp",
+                        "resource_group_name": "rg-bloco-check",
+                        "source_address_prefix": "*",
+                        "source_address_prefixes": [],
+                        "source_application_security_group_ids": [],
+                        "source_port_range": "*",
+                        "source_port_ranges": [],
+                        "timeouts": null
+                    },
+                    "sensitive_values": {
+                        "destination_address_prefixes": [],
+                        "destination_application_security_group_ids": [],
+                        "destination_port_ranges": [],
+                        "source_address_prefixes": [],
+                        "source_application_security_group_ids": [],
+                        "source_port_ranges": []
+                    }
+                },
+                {
+                    "address": "azurerm_network_security_rule.rule[\"8080\"]",
+                    "mode": "managed",
+                    "type": "azurerm_network_security_rule",
+                    "name": "rule",
+                    "index": "8080",
+                    "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                    "schema_version": 0,
+                    "values": {
+                        "access": "Allow",
+                        "description": "",
+                        "destination_address_prefix": "*",
+                        "destination_address_prefixes": [],
+                        "destination_application_security_group_ids": [],
+                        "destination_port_range": "8080",
+                        "destination_port_ranges": [],
+                        "direction": "Inbound",
+                        "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check/securityRules/porta-8080",
+                        "name": "porta-8080",
+                        "network_security_group_name": "nsg-bloco-check",
+                        "priority": 120,
+                        "protocol": "Tcp",
+                        "resource_group_name": "rg-bloco-check",
+                        "source_address_prefix": "*",
+                        "source_address_prefixes": [],
+                        "source_application_security_group_ids": [],
+                        "source_port_range": "*",
+                        "source_port_ranges": [],
+                        "timeouts": null
+                    },
+                    "sensitive_values": {
+                        "destination_address_prefixes": [],
+                        "destination_application_security_group_ids": [],
+                        "destination_port_ranges": [],
+                        "source_address_prefixes": [],
+                        "source_application_security_group_ids": [],
+                        "source_port_ranges": []
+                    }
+                },
+                {
+                    "address": "azurerm_resource_group.rg",
+                    "mode": "managed",
+                    "type": "azurerm_resource_group",
+                    "name": "rg",
+                    "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                    "schema_version": 0,
+                    "values": {
+                        "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check",
+                        "location": "westeurope",
+                        "name": "rg-bloco-check",
+                        "tags": {},
+                        "timeouts": null
+                    },
+                    "sensitive_values": {
+                        "tags": {}
+                    }
+                },
+                {
+                    "address": "data.azurerm_network_security_group.rules",
+                    "mode": "data",
+                    "type": "azurerm_network_security_group",
+                    "name": "rules",
+                    "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                    "schema_version": 0,
+                    "values": {
+                        "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check",
+                        "location": "westeurope",
+                        "name": "nsg-bloco-check",
+                        "resource_group_name": "rg-bloco-check",
+                        "security_rule": [
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destination_address_prefix": "*",
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_range": "443",
+                                "destination_port_ranges": [],
+                                "direction": "Inbound",
+                                "name": "porta-443",
+                                "priority": 110,
+                                "protocol": "Tcp",
+                                "source_address_prefix": "*",
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_range": "*",
+                                "source_port_ranges": []
+                            },
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destination_address_prefix": "*",
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_range": "8080",
+                                "destination_port_ranges": [],
+                                "direction": "Inbound",
+                                "name": "porta-8080",
+                                "priority": 120,
+                                "protocol": "Tcp",
+                                "source_address_prefix": "*",
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_range": "*",
+                                "source_port_ranges": []
+                            },
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destination_address_prefix": "*",
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_range": "80",
+                                "destination_port_ranges": [],
+                                "direction": "Inbound",
+                                "name": "porta-80",
+                                "priority": 100,
+                                "protocol": "Tcp",
+                                "source_address_prefix": "*",
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_range": "*",
+                                "source_port_ranges": []
+                            },
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destination_address_prefix": "*",
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_range": "22",
+                                "destination_port_ranges": [],
+                                "direction": "Inbound",
+                                "name": "SSH",
+                                "priority": 200,
+                                "protocol": "Tcp",
+                                "source_address_prefix": "*",
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_range": "*",
+                                "source_port_ranges": []
+                            },
+                            {
+                                "access": "Allow",
+                                "description": "",
+                                "destination_address_prefix": "*",
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_range": "3389",
+                                "destination_port_ranges": [],
+                                "direction": "Inbound",
+                                "name": "RDP",
+                                "priority": 210,
+                                "protocol": "Tcp",
+                                "source_address_prefix": "*",
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_range": "*",
+                                "source_port_ranges": []
+                            }
+                        ],
+                        "tags": {},
+                        "timeouts": null
+                    },
+                    "sensitive_values": {
+                        "security_rule": [
+                            {
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_ranges": [],
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_ranges": []
+                            },
+                            {
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_ranges": [],
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_ranges": []
+                            },
+                            {
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_ranges": [],
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_ranges": []
+                            },
+                            {
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_ranges": [],
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_ranges": []
+                            },
+                            {
+                                "destination_address_prefixes": [],
+                                "destination_application_security_group_ids": [],
+                                "destination_port_ranges": [],
+                                "source_address_prefixes": [],
+                                "source_application_security_group_ids": [],
+                                "source_port_ranges": []
+                            }
+                        ],
+                        "tags": {}
+                    }
+                }
+            ]
+        }
+    },
+    "resource_changes": [
+        {
+            "address": "data.azurerm_network_security_group.rules",
+            "mode": "data",
+            "type": "azurerm_network_security_group",
+            "name": "rules",
+            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+            "change": {
+                "actions": [
+                    "read"
+                ],
+                "before": null,
+                "after": {
+                    "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check",
+                    "location": "westeurope",
+                    "name": "nsg-bloco-check",
+                    "resource_group_name": "rg-bloco-check",
+                    "security_rule": [
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "443",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "porta-443",
+                            "priority": 110,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "8080",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "porta-8080",
+                            "priority": 120,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "80",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "porta-80",
+                            "priority": 100,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "22",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "SSH",
+                            "priority": 200,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "3389",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "RDP",
+                            "priority": 210,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        }
+                    ],
+                    "tags": {},
+                    "timeouts": null
+                },
+                "after_unknown": {},
+                "before_sensitive": false,
+                "after_sensitive": {
+                    "security_rule": [
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        }
+                    ],
+                    "tags": {}
+                }
+            },
+            "action_reason": "read_because_check_nested"
+        },
+        {
+            "address": "azurerm_network_security_group.nsg",
+            "mode": "managed",
+            "type": "azurerm_network_security_group",
+            "name": "nsg",
+            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+            "change": {
+                "actions": [
+                    "no-op"
+                ],
+                "before": {
+                    "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check",
+                    "location": "westeurope",
+                    "name": "nsg-bloco-check",
+                    "resource_group_name": "rg-bloco-check",
+                    "security_rule": [
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "22",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "SSH",
+                            "priority": 200,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "3389",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "RDP",
+                            "priority": 210,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "443",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "porta-443",
+                            "priority": 110,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "80",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "porta-80",
+                            "priority": 100,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "8080",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "porta-8080",
+                            "priority": 120,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        }
+                    ],
+                    "tags": {},
+                    "timeouts": null
+                },
+                "after": {
+                    "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check",
+                    "location": "westeurope",
+                    "name": "nsg-bloco-check",
+                    "resource_group_name": "rg-bloco-check",
+                    "security_rule": [
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "22",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "SSH",
+                            "priority": 200,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "3389",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "RDP",
+                            "priority": 210,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "443",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "porta-443",
+                            "priority": 110,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "80",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "porta-80",
+                            "priority": 100,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "8080",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "name": "porta-8080",
+                            "priority": 120,
+                            "protocol": "Tcp",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": []
+                        }
+                    ],
+                    "tags": {},
+                    "timeouts": null
+                },
+                "after_unknown": {},
+                "before_sensitive": {
+                    "security_rule": [
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        }
+                    ],
+                    "tags": {}
+                },
+                "after_sensitive": {
+                    "security_rule": [
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        }
+                    ],
+                    "tags": {}
+                }
+            }
+        },
+        {
+            "address": "azurerm_network_security_rule.rule[\"443\"]",
+            "mode": "managed",
+            "type": "azurerm_network_security_rule",
+            "name": "rule",
+            "index": "443",
+            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+            "change": {
+                "actions": [
+                    "no-op"
+                ],
+                "before": {
+                    "access": "Allow",
+                    "description": "",
+                    "destination_address_prefix": "*",
+                    "destination_address_prefixes": [],
+                    "destination_application_security_group_ids": [],
+                    "destination_port_range": "443",
+                    "destination_port_ranges": [],
+                    "direction": "Inbound",
+                    "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check/securityRules/porta-443",
+                    "name": "porta-443",
+                    "network_security_group_name": "nsg-bloco-check",
+                    "priority": 110,
+                    "protocol": "Tcp",
+                    "resource_group_name": "rg-bloco-check",
+                    "source_address_prefix": "*",
+                    "source_address_prefixes": [],
+                    "source_application_security_group_ids": [],
+                    "source_port_range": "*",
+                    "source_port_ranges": [],
+                    "timeouts": null
+                },
+                "after": {
+                    "access": "Allow",
+                    "description": "",
+                    "destination_address_prefix": "*",
+                    "destination_address_prefixes": [],
+                    "destination_application_security_group_ids": [],
+                    "destination_port_range": "443",
+                    "destination_port_ranges": [],
+                    "direction": "Inbound",
+                    "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check/securityRules/porta-443",
+                    "name": "porta-443",
+                    "network_security_group_name": "nsg-bloco-check",
+                    "priority": 110,
+                    "protocol": "Tcp",
+                    "resource_group_name": "rg-bloco-check",
+                    "source_address_prefix": "*",
+                    "source_address_prefixes": [],
+                    "source_application_security_group_ids": [],
+                    "source_port_range": "*",
+                    "source_port_ranges": [],
+                    "timeouts": null
+                },
+                "after_unknown": {},
+                "before_sensitive": {
+                    "destination_address_prefixes": [],
+                    "destination_application_security_group_ids": [],
+                    "destination_port_ranges": [],
+                    "source_address_prefixes": [],
+                    "source_application_security_group_ids": [],
+                    "source_port_ranges": []
+                },
+                "after_sensitive": {
+                    "destination_address_prefixes": [],
+                    "destination_application_security_group_ids": [],
+                    "destination_port_ranges": [],
+                    "source_address_prefixes": [],
+                    "source_application_security_group_ids": [],
+                    "source_port_ranges": []
+                }
+            }
+        },
+        {
+            "address": "azurerm_network_security_rule.rule[\"80\"]",
+            "mode": "managed",
+            "type": "azurerm_network_security_rule",
+            "name": "rule",
+            "index": "80",
+            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+            "change": {
+                "actions": [
+                    "no-op"
+                ],
+                "before": {
+                    "access": "Allow",
+                    "description": "",
+                    "destination_address_prefix": "*",
+                    "destination_address_prefixes": [],
+                    "destination_application_security_group_ids": [],
+                    "destination_port_range": "80",
+                    "destination_port_ranges": [],
+                    "direction": "Inbound",
+                    "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check/securityRules/porta-80",
+                    "name": "porta-80",
+                    "network_security_group_name": "nsg-bloco-check",
+                    "priority": 100,
+                    "protocol": "Tcp",
+                    "resource_group_name": "rg-bloco-check",
+                    "source_address_prefix": "*",
+                    "source_address_prefixes": [],
+                    "source_application_security_group_ids": [],
+                    "source_port_range": "*",
+                    "source_port_ranges": [],
+                    "timeouts": null
+                },
+                "after": {
+                    "access": "Allow",
+                    "description": "",
+                    "destination_address_prefix": "*",
+                    "destination_address_prefixes": [],
+                    "destination_application_security_group_ids": [],
+                    "destination_port_range": "80",
+                    "destination_port_ranges": [],
+                    "direction": "Inbound",
+                    "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check/securityRules/porta-80",
+                    "name": "porta-80",
+                    "network_security_group_name": "nsg-bloco-check",
+                    "priority": 100,
+                    "protocol": "Tcp",
+                    "resource_group_name": "rg-bloco-check",
+                    "source_address_prefix": "*",
+                    "source_address_prefixes": [],
+                    "source_application_security_group_ids": [],
+                    "source_port_range": "*",
+                    "source_port_ranges": [],
+                    "timeouts": null
+                },
+                "after_unknown": {},
+                "before_sensitive": {
+                    "destination_address_prefixes": [],
+                    "destination_application_security_group_ids": [],
+                    "destination_port_ranges": [],
+                    "source_address_prefixes": [],
+                    "source_application_security_group_ids": [],
+                    "source_port_ranges": []
+                },
+                "after_sensitive": {
+                    "destination_address_prefixes": [],
+                    "destination_application_security_group_ids": [],
+                    "destination_port_ranges": [],
+                    "source_address_prefixes": [],
+                    "source_application_security_group_ids": [],
+                    "source_port_ranges": []
+                }
+            }
+        },
+        {
+            "address": "azurerm_network_security_rule.rule[\"8080\"]",
+            "mode": "managed",
+            "type": "azurerm_network_security_rule",
+            "name": "rule",
+            "index": "8080",
+            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+            "change": {
+                "actions": [
+                    "no-op"
+                ],
+                "before": {
+                    "access": "Allow",
+                    "description": "",
+                    "destination_address_prefix": "*",
+                    "destination_address_prefixes": [],
+                    "destination_application_security_group_ids": [],
+                    "destination_port_range": "8080",
+                    "destination_port_ranges": [],
+                    "direction": "Inbound",
+                    "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check/securityRules/porta-8080",
+                    "name": "porta-8080",
+                    "network_security_group_name": "nsg-bloco-check",
+                    "priority": 120,
+                    "protocol": "Tcp",
+                    "resource_group_name": "rg-bloco-check",
+                    "source_address_prefix": "*",
+                    "source_address_prefixes": [],
+                    "source_application_security_group_ids": [],
+                    "source_port_range": "*",
+                    "source_port_ranges": [],
+                    "timeouts": null
+                },
+                "after": {
+                    "access": "Allow",
+                    "description": "",
+                    "destination_address_prefix": "*",
+                    "destination_address_prefixes": [],
+                    "destination_application_security_group_ids": [],
+                    "destination_port_range": "8080",
+                    "destination_port_ranges": [],
+                    "direction": "Inbound",
+                    "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check/securityRules/porta-8080",
+                    "name": "porta-8080",
+                    "network_security_group_name": "nsg-bloco-check",
+                    "priority": 120,
+                    "protocol": "Tcp",
+                    "resource_group_name": "rg-bloco-check",
+                    "source_address_prefix": "*",
+                    "source_address_prefixes": [],
+                    "source_application_security_group_ids": [],
+                    "source_port_range": "*",
+                    "source_port_ranges": [],
+                    "timeouts": null
+                },
+                "after_unknown": {},
+                "before_sensitive": {
+                    "destination_address_prefixes": [],
+                    "destination_application_security_group_ids": [],
+                    "destination_port_ranges": [],
+                    "source_address_prefixes": [],
+                    "source_application_security_group_ids": [],
+                    "source_port_ranges": []
+                },
+                "after_sensitive": {
+                    "destination_address_prefixes": [],
+                    "destination_application_security_group_ids": [],
+                    "destination_port_ranges": [],
+                    "source_address_prefixes": [],
+                    "source_application_security_group_ids": [],
+                    "source_port_ranges": []
+                }
+            }
+        },
+        {
+            "address": "azurerm_resource_group.rg",
+            "mode": "managed",
+            "type": "azurerm_resource_group",
+            "name": "rg",
+            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+            "change": {
+                "actions": [
+                    "no-op"
+                ],
+                "before": {
+                    "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check",
+                    "location": "westeurope",
+                    "name": "rg-bloco-check",
+                    "tags": {},
+                    "timeouts": null
+                },
+                "after": {
+                    "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check",
+                    "location": "westeurope",
+                    "name": "rg-bloco-check",
+                    "tags": {},
+                    "timeouts": null
+                },
+                "after_unknown": {},
+                "before_sensitive": {
+                    "tags": {}
+                },
+                "after_sensitive": {
+                    "tags": {}
+                }
+            }
+        }
+    ],
+    "prior_state": {
+        "format_version": "1.0",
+        "terraform_version": "1.12.2",
+        "values": {
+            "root_module": {
+                "resources": [
+                    {
+                        "address": "data.azurerm_network_security_group.nsg",
+                        "mode": "data",
+                        "type": "azurerm_network_security_group",
+                        "name": "nsg",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check",
+                            "location": "westeurope",
+                            "name": "nsg-bloco-check",
+                            "resource_group_name": "rg-bloco-check",
+                            "security_rule": [
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "443",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "porta-443",
+                                    "priority": 110,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "8080",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "porta-8080",
+                                    "priority": 120,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "80",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "porta-80",
+                                    "priority": 100,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "22",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "SSH",
+                                    "priority": 200,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "3389",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "RDP",
+                                    "priority": 210,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                }
+                            ],
+                            "tags": {},
+                            "timeouts": null
+                        },
+                        "sensitive_values": {
+                            "security_rule": [
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                }
+                            ],
+                            "tags": {}
+                        }
+                    },
+                    {
+                        "address": "data.azurerm_network_security_group.rules",
+                        "mode": "data",
+                        "type": "azurerm_network_security_group",
+                        "name": "rules",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check",
+                            "location": "westeurope",
+                            "name": "nsg-bloco-check",
+                            "resource_group_name": "rg-bloco-check",
+                            "security_rule": [
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "443",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "porta-443",
+                                    "priority": 110,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "8080",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "porta-8080",
+                                    "priority": 120,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "80",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "porta-80",
+                                    "priority": 100,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "22",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "SSH",
+                                    "priority": 200,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "3389",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "RDP",
+                                    "priority": 210,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                }
+                            ],
+                            "tags": {},
+                            "timeouts": null
+                        },
+                        "sensitive_values": {
+                            "security_rule": [
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                }
+                            ],
+                            "tags": {}
+                        }
+                    },
+                    {
+                        "address": "azurerm_network_security_group.nsg",
+                        "mode": "managed",
+                        "type": "azurerm_network_security_group",
+                        "name": "nsg",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check",
+                            "location": "westeurope",
+                            "name": "nsg-bloco-check",
+                            "resource_group_name": "rg-bloco-check",
+                            "security_rule": [
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "22",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "SSH",
+                                    "priority": 200,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "3389",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "RDP",
+                                    "priority": 210,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "443",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "porta-443",
+                                    "priority": 110,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "80",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "porta-80",
+                                    "priority": 100,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "access": "Allow",
+                                    "description": "",
+                                    "destination_address_prefix": "*",
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_range": "8080",
+                                    "destination_port_ranges": [],
+                                    "direction": "Inbound",
+                                    "name": "porta-8080",
+                                    "priority": 120,
+                                    "protocol": "Tcp",
+                                    "source_address_prefix": "*",
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_range": "*",
+                                    "source_port_ranges": []
+                                }
+                            ],
+                            "tags": {},
+                            "timeouts": null
+                        },
+                        "sensitive_values": {
+                            "security_rule": [
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                },
+                                {
+                                    "destination_address_prefixes": [],
+                                    "destination_application_security_group_ids": [],
+                                    "destination_port_ranges": [],
+                                    "source_address_prefixes": [],
+                                    "source_application_security_group_ids": [],
+                                    "source_port_ranges": []
+                                }
+                            ],
+                            "tags": {}
+                        },
+                        "depends_on": [
+                            "azurerm_resource_group.rg"
+                        ]
+                    },
+                    {
+                        "address": "azurerm_network_security_rule.rule[\"443\"]",
+                        "mode": "managed",
+                        "type": "azurerm_network_security_rule",
+                        "name": "rule",
+                        "index": "443",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "443",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check/securityRules/porta-443",
+                            "name": "porta-443",
+                            "network_security_group_name": "nsg-bloco-check",
+                            "priority": 110,
+                            "protocol": "Tcp",
+                            "resource_group_name": "rg-bloco-check",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "timeouts": null
+                        },
+                        "sensitive_values": {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        "depends_on": [
+                            "azurerm_network_security_group.nsg",
+                            "azurerm_resource_group.rg"
+                        ]
+                    },
+                    {
+                        "address": "azurerm_network_security_rule.rule[\"80\"]",
+                        "mode": "managed",
+                        "type": "azurerm_network_security_rule",
+                        "name": "rule",
+                        "index": "80",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "80",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check/securityRules/porta-80",
+                            "name": "porta-80",
+                            "network_security_group_name": "nsg-bloco-check",
+                            "priority": 100,
+                            "protocol": "Tcp",
+                            "resource_group_name": "rg-bloco-check",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "timeouts": null
+                        },
+                        "sensitive_values": {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        "depends_on": [
+                            "azurerm_network_security_group.nsg",
+                            "azurerm_resource_group.rg"
+                        ]
+                    },
+                    {
+                        "address": "azurerm_network_security_rule.rule[\"8080\"]",
+                        "mode": "managed",
+                        "type": "azurerm_network_security_rule",
+                        "name": "rule",
+                        "index": "8080",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "access": "Allow",
+                            "description": "",
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_range": "8080",
+                            "destination_port_ranges": [],
+                            "direction": "Inbound",
+                            "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check/providers/Microsoft.Network/networkSecurityGroups/nsg-bloco-check/securityRules/porta-8080",
+                            "name": "porta-8080",
+                            "network_security_group_name": "nsg-bloco-check",
+                            "priority": 120,
+                            "protocol": "Tcp",
+                            "resource_group_name": "rg-bloco-check",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "timeouts": null
+                        },
+                        "sensitive_values": {
+                            "destination_address_prefixes": [],
+                            "destination_application_security_group_ids": [],
+                            "destination_port_ranges": [],
+                            "source_address_prefixes": [],
+                            "source_application_security_group_ids": [],
+                            "source_port_ranges": []
+                        },
+                        "depends_on": [
+                            "azurerm_network_security_group.nsg",
+                            "azurerm_resource_group.rg"
+                        ]
+                    },
+                    {
+                        "address": "azurerm_resource_group.rg",
+                        "mode": "managed",
+                        "type": "azurerm_resource_group",
+                        "name": "rg",
+                        "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                        "schema_version": 0,
+                        "values": {
+                            "id": "/subscriptions/4c2a5261-029e-432d-9640-f3c6ba34d15c/resourceGroups/rg-bloco-check",
+                            "location": "westeurope",
+                            "name": "rg-bloco-check",
+                            "tags": {},
+                            "timeouts": null
+                        },
+                        "sensitive_values": {
+                            "tags": {}
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "configuration": {
+        "provider_config": {
+            "azurerm": {
+                "name": "azurerm",
+                "full_name": "registry.terraform.io/hashicorp/azurerm",
+                "version_constraint": "3.49.0",
+                "expressions": {
+                    "features": [
+                        {}
+                    ]
+                }
+            }
+        },
+        "root_module": {
+            "resources": [
+                {
+                    "address": "azurerm_network_security_group.nsg",
+                    "mode": "managed",
+                    "type": "azurerm_network_security_group",
+                    "name": "nsg",
+                    "provider_config_key": "azurerm",
+                    "expressions": {
+                        "location": {
+                            "references": [
+                                "azurerm_resource_group.rg.location",
+                                "azurerm_resource_group.rg"
+                            ]
+                        },
+                        "name": {
+                            "constant_value": "nsg-bloco-check"
+                        },
+                        "resource_group_name": {
+                            "references": [
+                                "azurerm_resource_group.rg.name",
+                                "azurerm_resource_group.rg"
+                            ]
+                        }
+                    },
+                    "schema_version": 0
+                },
+                {
+                    "address": "azurerm_network_security_rule.rule",
+                    "mode": "managed",
+                    "type": "azurerm_network_security_rule",
+                    "name": "rule",
+                    "provider_config_key": "azurerm",
+                    "expressions": {
+                        "access": {
+                            "constant_value": "Allow"
+                        },
+                        "destination_address_prefix": {
+                            "constant_value": "*"
+                        },
+                        "destination_port_range": {
+                            "references": [
+                                "each.key"
+                            ]
+                        },
+                        "direction": {
+                            "constant_value": "Inbound"
+                        },
+                        "name": {
+                            "references": [
+                                "each.key"
+                            ]
+                        },
+                        "network_security_group_name": {
+                            "references": [
+                                "azurerm_network_security_group.nsg.name",
+                                "azurerm_network_security_group.nsg"
+                            ]
+                        },
+                        "priority": {
+                            "references": [
+                                "local.nsg_ports",
+                                "each.key"
+                            ]
+                        },
+                        "protocol": {
+                            "constant_value": "Tcp"
+                        },
+                        "resource_group_name": {
+                            "references": [
+                                "azurerm_resource_group.rg.name",
+                                "azurerm_resource_group.rg"
+                            ]
+                        },
+                        "source_address_prefix": {
+                            "constant_value": "*"
+                        },
+                        "source_port_range": {
+                            "constant_value": "*"
+                        }
+                    },
+                    "schema_version": 0,
+                    "for_each_expression": {
+                        "references": [
+                            "local.nsg_ports"
+                        ]
+                    }
+                },
+                {
+                    "address": "azurerm_resource_group.rg",
+                    "mode": "managed",
+                    "type": "azurerm_resource_group",
+                    "name": "rg",
+                    "provider_config_key": "azurerm",
+                    "expressions": {
+                        "location": {
+                            "constant_value": "West Europe"
+                        },
+                        "name": {
+                            "constant_value": "rg-bloco-check"
+                        }
+                    },
+                    "schema_version": 0
+                },
+                {
+                    "address": "data.azurerm_network_security_group.nsg",
+                    "mode": "data",
+                    "type": "azurerm_network_security_group",
+                    "name": "nsg",
+                    "provider_config_key": "azurerm",
+                    "expressions": {
+                        "name": {
+                            "references": [
+                                "azurerm_network_security_group.nsg.name",
+                                "azurerm_network_security_group.nsg"
+                            ]
+                        },
+                        "resource_group_name": {
+                            "references": [
+                                "azurerm_resource_group.rg.name",
+                                "azurerm_resource_group.rg"
+                            ]
+                        }
+                    },
+                    "schema_version": 0,
+                    "depends_on": [
+                        "azurerm_network_security_group.nsg"
+                    ]
+                },
+                {
+                    "address": "data.azurerm_network_security_group.rules",
+                    "mode": "data",
+                    "type": "azurerm_network_security_group",
+                    "name": "rules",
+                    "provider_config_key": "azurerm",
+                    "expressions": {
+                        "name": {
+                            "references": [
+                                "azurerm_network_security_group.nsg.name",
+                                "azurerm_network_security_group.nsg"
+                            ]
+                        },
+                        "resource_group_name": {
+                            "references": [
+                                "azurerm_resource_group.rg.name",
+                                "azurerm_resource_group.rg"
+                            ]
+                        }
+                    },
+                    "schema_version": 0
+                }
+            ]
+        }
+    },
+    "relevant_attributes": [
+        {
+            "resource": "azurerm_network_security_group.nsg",
+            "attribute": [
+                "name"
+            ]
+        },
+        {
+            "resource": "azurerm_resource_group.rg",
+            "attribute": [
+                "name"
+            ]
+        }
+    ],
+    "checks": [
+        {
+            "address": {
+                "kind": "check",
+                "name": "nsg_rules",
+                "to_display": "check.nsg_rules"
+            },
+            "status": "fail",
+            "instances": [
+                {
+                    "address": {
+                        "to_display": "check.nsg_rules"
+                    },
+                    "status": "fail",
+                    "problems": [
+                        {
+                            "message": "Existem regras no Network security Group criadas fora do Terraform."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "timestamp": "2026-02-18T17:49:12Z",
+    "applyable": true,
+    "complete": true,
+    "errored": false
+}
